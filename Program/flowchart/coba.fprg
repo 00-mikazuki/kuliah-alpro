@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 12:15:55 PM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0wNzsxMjowNjowMCBQTTsyOTk3"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0wNzsxMjoxNTo1NSBQTTsxOzMxMTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="data" type="Integer" array="True" size="10"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="data[i]" expression="2*i"/>
+            </for>
+            <output expression="" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

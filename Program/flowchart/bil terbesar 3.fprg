@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-26 11:03:57 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0wOS0yNjsxMDoyNDo1NiBBTTsyOTk5"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0wOS0yNjsxMTowMzo1NyBBTTsyOzMxMDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil1, bil2, bil3" type="Integer" array="False" size=""/>
+            <input variable="bil1"/>
+            <input variable="bil2"/>
+            <input variable="bil3"/>
+            <if expression="bil1&gt;bil2 and bil1&gt;bil3">
+                <then>
+                    <output expression="&quot;bilangan &quot;&amp;bil1&amp;&quot; adalah terbesar&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="bil2&gt;bil3">
+                        <then>
+                            <output expression="&quot;bilangan &quot;&amp;bil2&amp;&quot; adalah terbesar&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;bilangan &quot;&amp;bil3&amp;&quot; adalah terbesar&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 11:25:14 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0wNzsxMToxNToyMiBBTTsyOTg1"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0wNzsxMToyNToxNCBBTTsxOzMwOTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="display(&quot;algoritma&quot;)"/>
+            <declare name="bil1, bil2, hasiljumlah" type="Integer" array="False" size=""/>
+            <input variable="bil1"/>
+            <input variable="bil2"/>
+            <assign variable="hasiljumlah" expression="jumlah(bil1, bil2)"/>
+            <output expression="hasiljumlah" newline="True"/>
+        </body>
+    </function>
+    <function name="display" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="String" array="False"/>
+        </parameters>
+        <body>
+            <output expression="a" newline="True"/>
+        </body>
+    </function>
+    <function name="jumlah" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <assign variable="hasil" expression="a+b"/>
+        </body>
+    </function>
+</flowgorithm>

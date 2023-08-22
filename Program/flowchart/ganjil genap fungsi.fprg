@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-07 12:05:18 PM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0wNzsxMToyNToxNiBBTTsyOTg5"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0wNzsxMjowNToxOCBQTTsxOzMxMTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil" type="Integer" array="False" size=""/>
+            <input variable="bil"/>
+            <if expression="ganjil(bil)">
+                <then>
+                    <output expression="bil&amp;&quot; bilangan ganjil&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="bil&amp;&quot; bilangan genap&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="ganjil" type="Boolean" variable="has">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="has" type="Boolean" array="False" size=""/>
+            <if expression="a%2=1">
+                <then>
+                    <assign variable="has" expression="True"/>
+                </then>
+                <else>
+                    <assign variable="has" expression="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

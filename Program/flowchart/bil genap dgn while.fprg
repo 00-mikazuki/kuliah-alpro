@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-03 09:37:21 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0wMjswMzo1MDozOCBQTTszMDAx"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0wMzswOTozNzoyMSBBTTszOzMxMDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, a, max, total" type="Integer" array="False" size=""/>
+            <output expression="&quot;berapa bilangan genap = &quot;" newline="True"/>
+            <input variable="max"/>
+            <assign variable="n" expression="1"/>
+            <assign variable="a" expression="1"/>
+            <assign variable="total" expression="0"/>
+            <while expression="n&lt;=max">
+                <if expression="a%2==0">
+                    <then>
+                        <output expression="&quot;bilangan genap ke-&quot;&amp;n&amp;&quot;=&quot;&amp;a" newline="True"/>
+                        <assign variable="n" expression="n+1"/>
+                        <assign variable="total" expression="total+a"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="a" expression="a+1"/>
+            </while>
+            <output expression="&quot;total =&quot;&amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

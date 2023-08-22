@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-03 10:17:34 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0wMzswOTo1MzoyMSBBTTsyOTg4"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0wMzsxMDoxNzozNCBBTTsxOzMwOTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, pembagi" type="Integer" array="False" size=""/>
+            <output expression="&quot;berapa bilangan =&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="pembagi" expression="0"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <if expression="n%i=0">
+                    <then>
+                        <output expression="&quot;dapat dibagi &quot;&amp;i" newline="True"/>
+                        <assign variable="pembagi" expression="pembagi+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;berjumlah &quot;&amp;pembagi&amp;&quot; pembagi&quot;" newline="True"/>
+            <if expression="pembagi=2">
+                <then>
+                    <output expression="&quot;jadi &quot;&amp;n&amp;&quot; adalah bilangan prima&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;jadi &quot;&amp;n&amp;&quot; bukan bilangan prima&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

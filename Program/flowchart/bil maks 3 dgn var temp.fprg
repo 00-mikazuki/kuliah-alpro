@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-26 11:19:25 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0wOS0yNjsxMToxMzoxMCBBTTsyOTg4"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0wOS0yNjsxMToxMzoxOSBBTTsxO1dJTkRPV1MgMTA7REVTS1RPUC1PODZQQzJMOzIwMjItMDktMjY7MTA6MjQ6NTYgQU07YmlsIHRlcmJlc2FyIDMuZnByZzs3OTgx"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0wOS0yNjsxMToxOToyNSBBTTsxOzMxMDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, temp" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a&gt;=b">
+                <then>
+                    <assign variable="temp" expression="a"/>
+                </then>
+                <else>
+                    <assign variable="temp" expression="b"/>
+                </else>
+            </if>
+            <if expression="temp&gt;=c">
+                <then>
+                    <output expression="&quot;bilangan maksimal adalah &quot;&amp;temp" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;bilangan maksimal adalah &quot;&amp;c" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

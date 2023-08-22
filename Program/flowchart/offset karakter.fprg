@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-26 07:39:35 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0yNTswNzoyMToyMSBQTTszMDAw"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0yNjswNzozOTozNSBBTTs0OzMxMTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kalimat, huruf, hurufBes, hurufKec" type="String" array="False" size=""/>
+            <declare name="count, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukkan kalimat = &quot;" newline="True"/>
+            <input variable="kalimat"/>
+            <output expression="&quot;masukkan huruf yang dicari = &quot;" newline="True"/>
+            <input variable="huruf"/>
+            <assign variable="hurufKec" expression="ToLower(huruf)"/>
+            <assign variable="hurufBes" expression="ToUpper(huruf)"/>
+            <assign variable="count" expression="1"/>
+            <for variable="i" start="0" end="len(kalimat)-1" direction="inc" step="1">
+                <if expression="huruf=Char(kalimat,i) or hurufKec=Char(kalimat,i) or hurufBes=Char(kalimat,i)">
+                    <then>
+                        <output expression="&quot;huruf &quot;&amp;hurufKec&amp;&quot; atau &quot;&amp;hurufBes&amp;&quot; ke- &quot;&amp;count&amp;&quot; : offset- &quot;&amp;i" newline="True"/>
+                        <assign variable="count" expression="count+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="ToLower" type="String" variable="kecil">
+        <parameters>
+            <parameter name="huruf" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="letter, code" type="Integer" array="False" size=""/>
+            <declare name="kecil" type="String" array="False" size=""/>
+            <assign variable="kecil" expression="&quot;&quot;"/>
+            <for variable="letter" start="0" end="len(huruf)-1" direction="inc" step="1">
+                <assign variable="code" expression="ToCode(Char(huruf,letter))"/>
+                <if expression="code&gt;64 and code&lt;91">
+                    <then>
+                        <assign variable="code" expression="ToCode(Char(huruf,letter))+32"/>
+                        <assign variable="kecil" expression="kecil &amp; ToChar(code)"/>
+                    </then>
+                    <else>
+                        <assign variable="kecil" expression="kecil &amp; ToChar(code)"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+    <function name="ToUpper" type="String" variable="besar">
+        <parameters>
+            <parameter name="huruf" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="letter, code" type="Integer" array="False" size=""/>
+            <declare name="besar" type="String" array="False" size=""/>
+            <assign variable="besar" expression="&quot;&quot;"/>
+            <for variable="letter" start="0" end="len(huruf)-1" direction="inc" step="1">
+                <assign variable="code" expression="ToCode(Char(huruf,letter))"/>
+                <if expression="code&gt;96 and code&lt;123">
+                    <then>
+                        <assign variable="code" expression="ToCode(Char(huruf,letter))-32"/>
+                        <assign variable="besar" expression="besar &amp; ToChar(code)"/>
+                    </then>
+                    <else>
+                        <assign variable="besar" expression="besar &amp; ToChar(code)"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

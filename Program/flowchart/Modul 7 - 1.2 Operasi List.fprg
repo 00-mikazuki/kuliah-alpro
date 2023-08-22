@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-16 12:35:55 PM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xNjswNzo1OTo0NCBBTTszMDAy"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xNjswODowODoyNiBBTTszO1dJTkRPV1MgMTA7REVTS1RPUC1PODZQQzJMOzIwMjItMTEtMTM7MDk6NTg6MzUgQU07bWVtYnVhdCBsaXN0LmZwcmc7NzkyNQ=="/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xNjswODoxMDowNiBBTTsyO1dJTkRPV1MgMTA7REVTS1RPUC1PODZQQzJMOzIwMjItMTEtMTY7MDc6MDk6MzUgQU07MS4xIENlayBMaXN0LmZwcmc7NzU4NA=="/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xNjsxMjozNTo1NSBQTTsyOzMxMTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="rataData1, rataData2" type="Real" array="False" size=""/>
+            <output expression="&quot;Ukuran list data1 = &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="data1" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Masukkan data1 ke- &quot;&amp;i" newline="True"/>
+                <input variable="data1[i]"/>
+            </for>
+            <assign variable="rataData1" expression="avgList(data1)"/>
+            <output expression="&quot;Ukuran list data2 = &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="data2" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Masukkan data2 ke- &quot;&amp;i" newline="True"/>
+                <input variable="data2[i]"/>
+            </for>
+            <assign variable="rataData2" expression="avgList(data2)"/>
+            <declare name="penjumlahan, tampildata1, tampildata2" type="String" array="False" size=""/>
+            <assign variable="tampildata1" expression="displayList(data1)"/>
+            <output expression="&quot;data - 1 = &quot;&amp;tampildata1&amp;&quot;; rata-rata list = &quot;&amp;rataData1" newline="True"/>
+            <assign variable="tampildata2" expression="displayList(data2)"/>
+            <output expression="&quot;data - 2 = &quot;&amp;tampildata2&amp;&quot;; rata-rata list = &quot;&amp;rataData2" newline="True"/>
+            <assign variable="penjumlahan" expression="addList(data1,data2)"/>
+            <output expression="tampildata1&amp;&quot; + &quot;&amp;tampildata2&amp;&quot; = &quot;&amp;penjumlahan" newline="True"/>
+        </body>
+    </function>
+    <function name="addList" type="String" variable="jumlah">
+        <parameters>
+            <parameter name="list1" type="Integer" array="True"/>
+            <parameter name="list2" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="jumlah" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="jumlah" expression="&quot;[ &quot;"/>
+            <if expression="Size(list1)==Size(list2)">
+                <then>
+                    <for variable="i" start="0" end="Size(list1)-1" direction="inc" step="1">
+                        <assign variable="jumlah" expression="jumlah&amp;ToString(list1[i]+list2[i])&amp;&quot; &quot;"/>
+                    </for>
+                    <assign variable="jumlah" expression="jumlah&amp;&quot;]&quot;"/>
+                </then>
+                <else>
+                    <assign variable="jumlah" expression="&quot;ukuran list tidak sama&quot;"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="avgList" type="Real" variable="rata2">
+        <parameters>
+            <parameter name="list" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="total, i" type="Integer" array="False" size=""/>
+            <declare name="rata2" type="Real" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <for variable="i" start="0" end="Size(list)-1" direction="inc" step="1">
+                <assign variable="total" expression="total+list[i]"/>
+            </for>
+            <assign variable="rata2" expression="total/Size(list)"/>
+        </body>
+    </function>
+    <function name="displayList" type="String" variable="strList">
+        <parameters>
+            <parameter name="list" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="strList" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="strList" expression="&quot;[ &quot;"/>
+            <for variable="i" start="0" end="Size(list)-1" direction="inc" step="1">
+                <assign variable="strList" expression="strList&amp;ToString(list[i])&amp;&quot; &quot;"/>
+            </for>
+            <assign variable="strList" expression="strList&amp;&quot;]&quot;"/>
+        </body>
+    </function>
+</flowgorithm>

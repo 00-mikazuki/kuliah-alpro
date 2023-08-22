@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-13 08:58:26 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xMzswODozNjo0MSBBTTsyOTky"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xMzswODo1ODoyNiBBTTszOzMxMDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="angka, pangkat, eksponen" type="Integer" array="False" size=""/>
+            <input variable="angka"/>
+            <input variable="pangkat"/>
+            <assign variable="eksponen" expression="eksponen(angka, pangkat)"/>
+            <output expression="eksponen" newline="True"/>
+        </body>
+    </function>
+    <function name="eksponen" type="Integer" variable="hasil">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hasil, i, x2" type="Integer" array="False" size=""/>
+            <assign variable="hasil" expression="0"/>
+            <assign variable="x2" expression="x"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <assign variable="hasil" expression="x*x2"/>
+                <assign variable="x" expression="hasil"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

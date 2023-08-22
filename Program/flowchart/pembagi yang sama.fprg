@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-17 09:36:41 PM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0xNzswODoyNzozNiBQTTszMDE0"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0xNzswOTozNjo0MSBQTTsyOzMxMjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bil1, bil2, i, n, a" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan bilangan pertama =&quot;" newline="True"/>
+            <input variable="bil1"/>
+            <output expression="&quot;Masukkan bilangan kedua =&quot;" newline="True"/>
+            <input variable="bil2"/>
+            <assign variable="n" expression="0"/>
+            <if expression="bil1&gt;bil2">
+                <then>
+                    <assign variable="a" expression="bil1"/>
+                </then>
+                <else>
+                    <assign variable="a" expression="bil2"/>
+                </else>
+            </if>
+            <for variable="i" start="1" end="a" direction="inc" step="1">
+                <if expression="bil1%i==0 and bil2%i==0">
+                    <then>
+                        <assign variable="n" expression="n+1"/>
+                        <output expression="&quot;Pembagi yang sama - &quot;&amp;n&amp;&quot; = &quot;&amp;i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

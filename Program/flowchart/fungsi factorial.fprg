@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-13 09:58:06 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xMzswOToyMjozMiBBTTsyOTg4"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xMzswOTo1ODowNiBBTTsyOzMxMDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, factorial" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <assign variable="factorial" expression="factorial(a)"/>
+            <output expression="factorial" newline="True"/>
+        </body>
+    </function>
+    <function name="factorial" type="Integer" variable="kali">
+        <parameters>
+            <parameter name="x" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, x2, kali" type="Integer" array="False" size=""/>
+            <assign variable="kali" expression="x"/>
+            <for variable="i" start="1" end="x" direction="inc" step="1">
+                <assign variable="x" expression="x-1"/>
+                <assign variable="kali" expression="kali*x"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

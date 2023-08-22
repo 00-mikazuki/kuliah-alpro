@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-03 09:53:17 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0wMzswOTozNzoyNyBBTTsyOTk2"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0wMzswOTo1MzoxNyBBTTsxOzMxMDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a1, a2, n, jumlah, i" type="Integer" array="False" size=""/>
+            <assign variable="a1" expression="1"/>
+            <assign variable="a2" expression="1"/>
+            <output expression="&quot;berapa angka =&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="a1" newline="True"/>
+                <assign variable="jumlah" expression="a1+a2"/>
+                <assign variable="a1" expression="a2"/>
+                <assign variable="a2" expression="jumlah"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

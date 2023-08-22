@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-16 10:35:31 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xNjswNzowOTozNSBBTTsyOTk3"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xNjswNzozNzo1OCBBTTsxO1dJTkRPV1MgMTA7REVTS1RPUC1PODZQQzJMOzIwMjItMTEtMTM7MDk6NTg6MzUgQU07bWVtYnVhdCBsaXN0LmZwcmc7NzkyOQ=="/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xNjsxMDozNTozMSBBTTszOzMwOTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <declare name="listPrima" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan jumlah list = &quot;" newline="True"/>
+            <input variable="n"/>
+            <declare name="data" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Masukkan data ke- &quot;&amp;i" newline="True"/>
+                <input variable="data[i]"/>
+            </for>
+            <assign variable="listPrima" expression="createListPrime(data)"/>
+            <output expression="listPrima" newline="True"/>
+        </body>
+    </function>
+    <function name="createListPrime" type="String" variable="listPrime">
+        <parameters>
+            <parameter name="list" type="Integer" array="True"/>
+        </parameters>
+        <body>
+            <declare name="listPrime" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="listPrime" expression="&quot;[ &quot;"/>
+            <for variable="i" start="0" end="Size(list)-1" direction="inc" step="1">
+                <if expression="isPrime(list[i])">
+                    <then>
+                        <assign variable="listPrime" expression="listPrime&amp;ToString(list[i])&amp;&quot; &quot;"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="listPrime" expression="listPrime&amp;&quot;]&quot;"/>
+        </body>
+    </function>
+    <function name="isPrime" type="Boolean" variable="prime">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="prime" type="Boolean" array="False" size=""/>
+            <declare name="pembagi, i" type="Integer" array="False" size=""/>
+            <assign variable="pembagi" expression="0"/>
+            <if expression="n&gt;=2">
+                <then>
+                    <for variable="i" start="1" end="n" direction="inc" step="1">
+                        <if expression="n%i==0">
+                            <then>
+                                <assign variable="pembagi" expression="pembagi+1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </for>
+                    <if expression="pembagi==2">
+                        <then>
+                            <assign variable="prime" expression="True"/>
+                        </then>
+                        <else>
+                            <assign variable="prime" expression="False"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="prime" expression="False"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

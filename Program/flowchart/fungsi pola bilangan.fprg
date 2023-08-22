@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-13 09:56:23 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xMzswOTowMzoyMyBBTTsyOTg3"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xMzswOTowODoyNSBBTTsyO1dJTkRPV1MgMTA7REVTS1RPUC1PODZQQzJMOzIwMjItMTAtMDM7MDk6Mzc6MjcgQU07ZGVyZXQgZmlib25hY2NpLmZwcmc7ODE4NA=="/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xMzswOTo1NjoyMyBBTTsyOzMxMDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, bilangan" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <assign variable="bilangan" expression="bilangan(a)"/>
+            <output expression="&quot;bilangan ke-&quot;&amp;a&amp;&quot; adalah &quot;&amp;bilangan" newline="True"/>
+        </body>
+    </function>
+    <function name="bilangan" type="Integer" variable="jumlah">
+        <parameters>
+            <parameter name="n" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="a1, a2, jumlah, i" type="Integer" array="False" size=""/>
+            <assign variable="a1" expression="1"/>
+            <assign variable="a2" expression="1"/>
+            <for variable="i" start="1" end="n-1" direction="inc" step="1">
+                <assign variable="jumlah" expression="a1+a2"/>
+                <assign variable="a1" expression="a2"/>
+                <assign variable="a2" expression="jumlah"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-26 10:24:52 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0wOS0yNjsxMDoxNTowMSBBTTsyOTg5"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0wOS0yNjsxMDoyNDo1MiBBTTsxOzMxMDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="C, F" type="Integer" array="False" size=""/>
+            <input variable="C"/>
+            <assign variable="F" expression="9/5*C+32"/>
+            <output expression="F" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-14 11:07:59 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xMzswNjo0Njo0NiBQTTszMDEx"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xMzswNjo0Njo0OSBQTTsxO1dJTkRPV1MgMTA7REVTS1RPUC1PODZQQzJMOzIwMjItMTEtMTM7MDk6NTg6MzUgQU07bWVtYnVhdCBsaXN0LmZwcmc7Nzk0MA=="/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMS0xNDsxMTowNzo1OSBBTTsyOzMxMDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="list" type="Integer" array="True" size="n"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <assign variable="list[i]" expression="i*2"/>
+            </for>
+            <output expression="displayArray(list,n)" newline="True"/>
+        </body>
+    </function>
+    <function name="displayArray" type="String" variable="tampil">
+        <parameters>
+            <parameter name="data" type="Integer" array="True"/>
+            <parameter name="jumlahData" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="tampil" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="tampil" expression="&quot; &quot;"/>
+            <for variable="i" start="0" end="jumlahData-1" direction="inc" step="1">
+                <assign variable="tampil" expression="tampil&amp;ToString(data[i])&amp;&quot; &quot;"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

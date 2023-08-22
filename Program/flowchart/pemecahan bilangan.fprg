@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-18 01:04:04 AM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0xODsxMjoyMTowNyBBTTsyOTg3"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0xODswMTowNDowNCBBTTsxOzMwOTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="angka, a, n, bagi" type="Integer" array="False" size=""/>
+            <declare name="stop" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Masukkan angka =&quot;" newline="True"/>
+            <input variable="angka"/>
+            <assign variable="a" expression="5"/>
+            <assign variable="n" expression="1"/>
+            <assign variable="stop" expression="False"/>
+            <while expression="not(stop)">
+                <assign variable="bagi" expression="angka/10^a"/>
+                <output expression="n&amp;&quot; : &quot;&amp;bagi&amp;&quot; x &quot;&amp;10^a" newline="True"/>
+                <assign variable="angka" expression="angka%10^a"/>
+                <assign variable="a" expression="a-1"/>
+                <assign variable="n" expression="n+1"/>
+                <if expression="angka=0">
+                    <then>
+                        <assign variable="stop" expression="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

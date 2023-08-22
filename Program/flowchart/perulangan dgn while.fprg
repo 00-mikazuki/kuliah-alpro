@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="WINDOWS 10"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-02 04:06:15 PM"/>
+        <attribute name="created" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0wOS0yNjsxMTo1NzowOSBBTTszMDA0"/>
+        <attribute name="edited" value="V0lORE9XUyAxMDtERVNLVE9QLU84NlBDMkw7MjAyMi0xMC0wMjswNDowNjoxNSBQTTsyOzMxMDc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="stop" type="Boolean" array="False" size=""/>
+            <declare name="inp" type="String" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <assign variable="stop" expression="False"/>
+            <assign variable="n" expression="1"/>
+            <while expression="not(stop)">
+                <output expression="&quot;algoritma-&quot;&amp;n" newline="True"/>
+                <output expression="&quot;lagi (y/t)?&quot;" newline="True"/>
+                <input variable="inp"/>
+                <assign variable="n" expression="n+1"/>
+                <if expression="inp=&quot;t&quot;">
+                    <then>
+                        <assign variable="stop" expression="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
